@@ -52,13 +52,6 @@
                 "description": "Message that will be displayed to the user notifying them of the automatic logoff."
             }
         },
-        "defaultDesktopUsers": {
-            "type": "string",
-            "metadata": {
-                "description": "Provide a comma separated list of users you would like to assign to access the desktop for this host pool. Example: user1@contoso.com,user2@contoso.com,user3@contoso.com "
-            },
-            "defaultValue": ""
-        },
         "tenantAdminUpnOrApplicationId": {
             "type": "string",
             "metadata": {
@@ -416,8 +409,7 @@
                         "deleteordeallocateVMs": "[parameters('ActionOnPreviousVirtualMachines')]",
                         "messageTitle": "[variables('messageTitle')]",
                         "userNotificationMessege": "[parameters('userNotificationMessege')]",
-                        "userLogoffDelayInMinutes": "[parameters('userLogoffDelayInMinutes')]",
-                        "defaultDesktopUsers": "[concat('\"',parameters('defaultDesktopUsers'),'\"')]"
+                        "userLogoffDelayInMinutes": "[parameters('userLogoffDelayInMinutes')]"
                     }
                 },
                 "ProtectedSettings": {
